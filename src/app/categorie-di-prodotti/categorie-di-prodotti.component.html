@@ -1,1 +1,12 @@
-<p>categorie-di-prodotti works!</p>
+<!-- categorie-di-prodotti.component.html -->
+
+<div class="container">
+    <h1>Elenco Categorie di Prodotti</h1>
+    <mat-list>
+      <mat-list-item *ngFor="let categoria of categorie">
+        {{ categoria.nome }}
+        <button mat-button color="primary" (click)="selezionaCategoria(categoria.id)">Seleziona</button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

@@ -42,9 +42,19 @@ export class HomeComponent implements OnInit {
     'Sport'
     
   ];
+promotions: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  getUser(): { name: string, surname: string, email: string } {
+    return {
+      name: 'John',
+      surname: 'Doe',
+      email: 'johndoe@example.com'
+    };
   }
 }

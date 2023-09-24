@@ -1,66 +1,80 @@
-/* Stile base della navbar */
+
+/* FILEPATH: /Users/sergeguea/My-Ecommerce/src/app/navbar/navbar.component.css */
+
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    max-width: 100vw;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-container img {
-    width: 100px;
-    height: 50px;
-  }
-  
+  background-color: #4690b8;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #f2f2f2;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
   .navbar-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    margin-right: 20px;
-  }
-  
-  .menu-toggle {
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    transition: all 0.3s ease;
   }
-  
-  /* Stile per rendere la navbar responsive */
-  @media screen and (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .navbar-links {
-      margin-top: 20px;
-      display: none;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .navbar-links a {
-      margin: 10px 0;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
+
+  .navbar-links.active {
+    display: flex;
   }
-  
+
+  .navbar-links a {
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

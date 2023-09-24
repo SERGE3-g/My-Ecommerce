@@ -1,32 +1,43 @@
+
+
 <div class="home-container">
-    <h1>Benvenuti nel nostro negozio online!</h1>
-    <p>Scopri i nostri prodotti in evidenza, le categorie di prodotti e le ultime promozioni.</p>
-  
-    <section class="featured">
-        <h2>Prodotti in Evidenza</h2>
-        <div *ngFor="let product of featuredProducts" class="product">
-          <img [src]="product.image" alt="{{product.name}}" class="product-image">
-          <h3>{{product.name}}</h3>
-          <p>{{product.price | currency:'EUR'}}</p>
-        </div>
-      </section>
-  
-      <section class="categories">
-        <h2>Categorie di Prodotti</h2>
-        <ul>
-          <li *ngFor="let category of categories">{{ category }}</li>
-        </ul>
-      </section>
-      
-    <section class="promotions">
-      <h2>Promozioni</h2>
-      <!-- Aggiungi qui le promozioni -->
-    </section>
-  
-    <footer>
-      <a href="/cart">Carrello</a> |
-      <a href="/user-profile">Profilo Utente</a> |
-      <a href="/customer-support">Assistenza Clienti</a>
-    </footer>
-  </div>
+  <h1>Benvenuti nel nostro negozio online!</h1>
+  <p>Scopri i nostri prodotti in evidenza, le categorie di prodotti e le ultime promozioni.</p>
+  <section class="featured">
+    <h2>Prodotti in Evidenza</h2>
+    <div *ngFor="let product of featuredProducts" class="product">
+      <img [src]="product.image" alt="{{product.name}}" class="product-image">
+      <h3>{{product.name}}</h3>
+      <p>{{product.price | currency:'EUR'}}</p>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Categorie di Prodotti</h2>
+    <ul>
+      <li *ngFor="let category of categories">
+        <a routerLink="/elettronica, (click)=category]">
+          <img [src]="'assets/images/' + category + '.jpg'" alt="{{category}}" class="category-image">
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="promotions">
+    <h2>Promozioni</h2>
+    <div *ngFor="let promotion of promotions" class="promotion">
+      <img [src]="promotion.image" alt="{{promotion.name}}" class="promotion-image">
+      <h3>{{promotion.name}}</h3>
+      <p>{{promotion.description}}</p>
+    </div>
+  </section>
+
+  <footer>
+    <a routerLink="/carello">Carrello</a> |
+    <a routerLink="/profilo-utente">Profilo Utente</a> |
+    <a routerLink="/assistenza-clienti">Assistenza Clienti</a>
+    <a routerLink="/about">Chi Siamo</a> |
+    <a routerLink="/contact">Contatti</a> |
+  </footer>
+</div>
   

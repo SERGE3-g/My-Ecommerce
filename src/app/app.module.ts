@@ -15,6 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { CarelloComponent } from './carello/carello.component';
+import { OrdineComponent } from './ordine/ordine.component';
+import { ElettronicaComponent } from './elettronica/elettronica.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -28,14 +33,19 @@ import { ContactComponent } from './contact/contact.component';
     ProfiloUtenteComponent,
     RegistrazioneComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent,
+    CarelloComponent,
+    OrdineComponent,
+    ElettronicaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

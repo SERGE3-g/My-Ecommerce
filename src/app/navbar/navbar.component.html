@@ -1,22 +1,24 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="logo">
-      <!-- Inserisci qui il logo dell'e-commerce -->
       <img src="path-to-your-logo.png" alt="E-commerce Logo">
     </div>
     <div class="navbar-links" [ngClass]="{'active': menuActive}">
       <a routerLink="/" (click)="toggleMenu()">Home</a>
-      <a routerLink="/prodotti" (click)="toggleMenu()">Prodotti</a>
-      <a routerLink="/categorie" (click)="toggleMenu()">Categorie</a>
-      <a routerLink="/ordini" (click)="toggleMenu()">Ordini</a>
-      <a routerLink="/carrello" (click)="toggleMenu()">Carrello</a>
+      <a routerLink="/prodotti-in-evidenza" (click)="toggleMenu()">Prodotti</a>
+      <a routerLink="/categorie-di-prodotti" (click)="toggleMenu()">Categorie</a>
+      <a routerLink="/ordine" (click)="toggleMenu()">Ordini</a>
+      <a routerLink="/carello" (click)="toggleMenu()">Carrello</a>
       <a routerLink="/about" (click)="toggleMenu()">Chi Siamo</a>
       <a routerLink="/contact" (click)="toggleMenu()">Contatti</a>
       <a routerLink="/profilo-utente" (click)="toggleMenu()">Profilo</a>
       <a routerLink="/login" (click)="toggleMenu()">Login</a>
-      <a routerLink="/register" (click)="toggleMenu()">Registrati</a>
+      <a routerLink="/registrazione" (click)="toggleMenu()">Registrati</a>
       
     </div>
     <button class="menu-toggle" (click)="toggleMenu()">&#9776;</button>
   </div>
 </nav>
+
+
+
